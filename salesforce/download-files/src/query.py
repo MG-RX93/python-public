@@ -2,7 +2,7 @@ import sys
 import requests
 import os
 from dotenv import load_dotenv  # Make sure to install the package using `pip install python-dotenv`
-from salesforce_auth import get_access_token
+from auth import get_access_token
 
 # Load environment variables from .env file
 load_dotenv()

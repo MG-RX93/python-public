@@ -3,7 +3,7 @@ import sys
 import requests
 import json
 from datetime import datetime, timedelta
-from query_salesforce import main as get_salesforce_data
+from query import main as get_salesforce_data
 
 
 # Function to download a file from a given URL

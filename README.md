@@ -25,6 +25,7 @@ monorepo_name/                           # Root directory of your monorepo
 │   │                                     (or pyproject.toml for projects using PEP 517/518 standards)
 │   ├── requirements.txt                 # List of dependencies needed for project1
 │   ├── .env                             # Environment file for project1
+│   ├── .vscode                          # VS Code settings for project1
 │   ├── src/                             # Source code directory for project1
 │   │   ├── __init__.py                  # Empty file to make src a Python package
 │   │   ├── module/                      # A module within the project1
@@ -52,6 +53,7 @@ monorepo_name/                           # Root directory of your monorepo
 │   │                                     (or pyproject.toml)
 │   ├── requirements.txt                 # List of dependencies needed for project2
 │   ├── .env                             # Environment file for project2
+│   ├── .vscode                          # VS Code settings for project2
 │   ├── src/                             # Source code directory for project2
 │   │   ├── __init__.py                  # Empty file to make src a Python package
 │   │   ├── module/                      # A module within the project2

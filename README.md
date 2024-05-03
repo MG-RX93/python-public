@@ -24,6 +24,7 @@ monorepo_name/                           # Root directory of your monorepo
 │   ├── setup.py                         # Setup script for installing project1 as a package
 │   │                                     (or pyproject.toml for projects using PEP 517/518 standards)
 │   ├── requirements.txt                 # List of dependencies needed for project1
+│   ├── .env                             # Environment file for project1
 │   ├── src/                             # Source code directory for project1
 │   │   ├── __init__.py                  # Empty file to make src a Python package
 │   │   ├── module/                      # A module within the project1
@@ -50,6 +51,7 @@ monorepo_name/                           # Root directory of your monorepo
 │   ├── setup.py                         # Setup script for installing project2 as a package
 │   │                                     (or pyproject.toml)
 │   ├── requirements.txt                 # List of dependencies needed for project2
+│   ├── .env                             # Environment file for project2
 │   ├── src/                             # Source code directory for project2
 │   │   ├── __init__.py                  # Empty file to make src a Python package
 │   │   ├── module/                      # A module within the project2
@@ -93,6 +95,7 @@ my_python_project/
 ├── LICENSE              # The license file for the project
 ├── README.md            # Project description and instructions
 ├── requirements.txt     # Python dependencies for pip to install
+├── .env                 # Environment file for project1
 │
 ├── setup.py             # Setup script for installing the project (if it's a package)
 ├── pyproject.toml       # Configuration for build system requirements (PEP 518)

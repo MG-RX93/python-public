@@ -78,3 +78,48 @@ monorepo_name/                           # Root directory of your monorepo
 
 ```
 
+## Directory structure for an individual packaged python project
+```text
+my_python_project/
+│
+├── .git/                # Git repository folder (auto-generated when you run `git init`)
+├── .gitignore           # Specifies intentionally untracked files to ignore by Git
+│
+├── .github/             # GitHub specific files like workflow and issue templates (optional)
+│   ├── workflows/
+│   │   └── ci.yml       # GitHub Actions CI workflow (if using GitHub Actions)
+│   └── ...
+│
+├── LICENSE              # The license file for the project
+├── README.md            # Project description and instructions
+├── requirements.txt     # Python dependencies for pip to install
+│
+├── setup.py             # Setup script for installing the project (if it's a package)
+├── pyproject.toml       # Configuration for build system requirements (PEP 518)
+│
+├── src/                 # Source files of the project
+│   ├── __init__.py      # Makes src a Python package
+│   ├── main.py          # Entry point of the application (if applicable)
+│   ├── mymodule/        # A sample module (directory with __init__.py)
+│   │   ├── __init__.py
+│   │   ├── submodule1.py
+│   │   └── submodule2.py
+│   └── ...
+│
+├── tests/               # Test suite for the project
+│   ├── __init__.py
+│   ├── test_main.py
+│   ├── test_mymodule.py
+│   └── ...
+│
+├── docs/                # Documentation files
+│   └── ...
+│
+├── scripts/             # Useful scripts (optional)
+│   ├── deploy.sh        # Deployment script (for example)
+│   └── ...
+│
+└── data/                # Data files (if any and if they are not too large)
+    └── ...
+
+```

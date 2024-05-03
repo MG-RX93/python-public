@@ -50,7 +50,7 @@ def is_token_expired() -> bool:
         bool: True if the token has expired; False otherwise.
     """
     global _token_expiry
-    return datetime.now() >= _token_expiry
+    return datetime.now() < _token_expiry
 
 
 def request_new_access_token() -> tuple:

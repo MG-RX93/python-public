@@ -11,7 +11,6 @@ from src.auth import (
     validate_auth_response,
 )
 
-
 class TestYourModule(unittest.TestCase):
     # @patch('src.auth.os.getenv')
     # @patch('src.auth.datetime')

@@ -3,7 +3,14 @@ from unittest.mock import patch, MagicMock
 from datetime import datetime
 
 # Now you can import the functions from auth.py
-from src.auth import get_access_token, get_cached_access_token, is_token_expired, request_new_access_token, validate_auth_response
+from src.auth import (
+    get_access_token,
+    get_cached_access_token,
+    is_token_expired,
+    request_new_access_token,
+    validate_auth_response,
+)
+
 
 class TestYourModule(unittest.TestCase):
     # @patch('src.auth.os.getenv')
@@ -21,7 +28,7 @@ class TestYourModule(unittest.TestCase):
     #     # Assert token is returned correctly
     #     self.assertEqual(token, 'test_token')
 
-    @patch('src.auth.datetime')
+    @patch("src.auth.datetime")
     def test_is_token_expired(self, mock_datetime):
         # Set up mock datetime
         mock_datetime.now.return_value = datetime(2023, 1, 1, 12, 0, 0)
@@ -74,7 +81,8 @@ class TestYourModule(unittest.TestCase):
     #     with self.assertRaises(Exception):
     #         validate_auth_response(response)
 
+
 # More tests can be added to cover other cases and functions
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

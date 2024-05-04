@@ -73,6 +73,7 @@ monorepo_name/                           # Root directory of your monorepo
 │
 └── shared_resources/                    # (Optional) Shared code or resources across projects
     ├── __init__.py                      # Empty file to make shared_resources a Python package
+    ├── requirements.txt                 # List of dependencies needed for shared dir
     ├── shared_module.py                 # A shared module that can be used by multiple projects
     └── ...                              # Other shared modules, libraries, or resources
 

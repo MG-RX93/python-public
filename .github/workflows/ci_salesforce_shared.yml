@@ -1,0 +1,40 @@
+name: CI for Shared Resources
+
+on:
+  push:
+    paths:
+      - 'salesforce/shared/src/**'
+      - 'salesforce/shared/tests/**'
+  pull_request:
+    paths:
+      - 'salesforce/shared/src/**'
+      - 'salesforce/shared/tests/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.11.7'  # Specify the Python version you need
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # If you have a requirements.txt in the shared_resources directory, uncomment the next line
+          pip install -r requirements.txt
+
+
+      - name: Run tests
+        run: |
+          # Navigate to the tests directory and execute the tests
+          # This assumes you have a script or Makefile to run your tests
+          # or you can directly call your test runner, e.g., pytest
+          cd salesforce/shared/tests
+          # Replace with the command you use to run your tests, e.g., pytest
+          python -m unittest discover

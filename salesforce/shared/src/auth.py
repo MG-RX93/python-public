@@ -129,4 +129,3 @@ def cache_access_token(access_token: str, instance_url: str, issued_at: str):
     _instance_url = instance_url
     issued_at_datetime = datetime.fromtimestamp(int(issued_at) / 1000)
     _token_expiry = issued_at_datetime + timedelta(seconds=token_lifetime)
-

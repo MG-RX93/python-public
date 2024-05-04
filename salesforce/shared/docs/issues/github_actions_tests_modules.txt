@@ -1,0 +1,24 @@
+The ModuleNotFoundError you're encountering indicates that the Python interpreter can't find the src module when trying to import it within your test code. 
+This is often an issue of the Python path not being set correctly. The test is being run from within the salesforce/shared/tests directory.
+But Python doesn't know to look in the parent directory (salesforce/shared) for the src module.
+
+To fix this issue, you need to adjust the PYTHONPATH environment variable within the GitHub Actions workflow to include the salesforce/shared directory. 
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ... other steps ...
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r salesforce/shared/requirements.txt
+
+      - name: Run tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}/salesforce/shared
+        run: |
+          cd salesforce/shared/tests
+          python -m unittest discover
